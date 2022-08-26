@@ -1,0 +1,68 @@
+%--------------------------------------------------------------------%
+%
+% Title         : Postgraduate Thesis LaTex template
+% Author        : Ravi Vendra Rishika <ravi.vendra.rishika@gmail.com>
+%
+% Page          : Preambule (Import Library)
+%
+% It is developed especially for postgraduate students of :
+%   Department of Informatics
+%   Faculty of Intelligent Electrical and Informatics Technology
+%   Sepuluh Nopember Institute of Technology (ITS)
+%   Surabaya, Indonesia.
+%
+% This LaTex template is intended to make students easier
+% to write master's degree thesis in LaTex using specific
+% Department of Informatics of ITS' format.
+%
+%--------------------------------------------------------------------%
+
+\special{papersize=210mm,297mm}
+
+% Setting margin
+% \usepackage[top=3cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+\usepackage[top=3.5cm,bottom=3cm,inner=4cm,outer=3cm]{geometry}
+
+\usepackage{mathptmx}
+
+% Judul bahasa Indonesia
+\usepackage[indonesian]{babel}
+
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx, titling, blindtext, sectsty, chngcntr}
+\usepackage{etoolbox, titlesec, parskip, watermark, eso-pic}
+\usepackage[hidelinks]{hyperref}
+\usepackage[pages=some]{background}
+\usepackage{setspace}
+\usepackage{xcolor, ragged2e}
+
+\usepackage{amsmath, csquotes}
+
+% Format citation
+% \usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+% \usepackage[backend=biber,style=numeric]{biblatex}
+% \usepackage[backend=bibtex,citestyle=authoryear]{biblatex}
+\usepackage{natbib}
+
+% \usepackage[T1]{fontenc}
+% \usepackage{tgbonum}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\chapterfont{\centering \Large}
+\titleformat{\chapter}[display]
+  {\Large\centering\bfseries}
+  {\chaptertitlename\ \thechapter}{0pt}
+    {\Large\bfseries\uppercase}
+
+\setcounter{secnumdepth}{3}
+
+\makeatletter
+
+\makeatother
+
+\counterwithin{figure}{section}
+\counterwithin{table}{section}

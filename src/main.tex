@@ -1,0 +1,194 @@
+%--------------------------------------------------------------------%
+%
+% Title         : Postgraduate Thesis LaTex template
+% Author        : Ravi Vendra Rishika <ravi.vendra.rishika@gmail.com>
+%
+% Page          : Main TeX
+%
+% It is developed especially for postgraduate students of :
+%   Department of Informatics
+%   Faculty of Intelligent Electrical and Informatics Technology
+%   Sepuluh Nopember Institute of Technology (ITS)
+%   Surabaya, Indonesia.
+%
+% This LaTex template is intended to make students easier
+% to write master's degree thesis in LaTex using specific
+% Department of Informatics of ITS' format.
+%
+%--------------------------------------------------------------------%
+
+\documentclass[11pt, a4paper, onecolumn, twoside, final, indonesian]{book}
+
+\input{config/preambule.sty}
+
+\makeatletter
+
+\makeatother
+
+% \SetWatermarkLightness{0.9}
+% \SetWatermarkText{\includegraphics[angle=-45]{src/resources/its-thesis-cover.png}
+
+% \newcommand\BackgroundPic{
+%     \put(0,0){
+%         \parbox[b][\paperheight]{\paperwidth}{
+%             \vfill
+            
+%             \centering
+%             \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{src/resources/its-thesis-cover.png}
+            
+%             \vfill
+%         }
+%     }
+% }
+
+% IEEE Bibliography Style
+% \bibliographystyle{abbrvnat}
+
+% Harvard Bibliography Style
+\bibliographystyle{agsm}
+
+\setcitestyle{authoryear, open={(},close={)}}
+
+\backgroundsetup{
+    scale=1,
+    color=black,
+    opacity=1.0,
+    angle=0,
+    contents={%
+        \includegraphics[width=\paperwidth,height=\paperheight]{src/resources/its-thesis-cover-without-logo.png}
+    }%
+}
+
+\begin{document}
+
+    % \AddToShipoutPicture*{\BackgroundPic}
+    \BgThispage
+    
+    % New variables defined here
+    \newcommand\titleID{TESIS MAHASISWA DEPARTEMEN TEKNIK INFORMATIKA INSTITUT TEKNOLOGI SEPULUH NOPEMBER (DALAM BAHASA INDONESIA)}
+    \newcommand\titleEN{POSTGRADUATE STUDENT THESIS OF INFORMATICS DEPARTMENT OF SEPULUH NOPEMBER INSTITUTE OF TECHNOLOGY (IN ENGLISH)}
+
+    \newcommand\authorName{Nama Mahasiswa}
+    \newcommand\authorNRP{60xxxxxxxx}
+    
+    \newcommand\firstSupervisorName{Dosen Pembimbing ke-1 (Lengkap)}
+    \newcommand\firstSupervisorNameShort{Dosen Pembimbing ke-1 (Singkat)}
+    \newcommand\firstSupervisorNIP{20xxxxxxxx}
+    \newcommand\firstSupervisor{
+        \firstSupervisorName \\
+        NIP \> : \firstSupervisorNIP
+    }
+    
+    \newcommand\secondSupervisorName{Dosen Pembimbing ke-2 (Lengkap)}
+    \newcommand\secondSupervisorNameShort{Dosen Pembimbing ke-2 (Singkat)}
+    \newcommand\secondSupervisorNIP{20xxxxxxxx}
+    \newcommand\secondSupervisor{
+        \secondSupervisorName \\
+        NIP \> : \secondSupervisorNIP
+    }
+    
+    \newcommand\firstExaminerName{Dosen Penguji ke-1 (Lengkap)}
+    \newcommand\firstExaminerNameShort{Dosen Penguji ke-1 (Singkat)}
+    \newcommand\firstExaminerNIP{20xxxxxxxx}
+    \newcommand\firstExaminer{
+        \firstExaminerName \\
+        NIP \> : \firstExaminerNIP
+    }
+    
+    \newcommand\secondExaminerName{Dosen Penguji ke-2 (Lengkap)}
+    \newcommand\secondExaminerNameShort{Dosen Penguji ke-2 (Singkat)}
+    \newcommand\secondExaminerNIP{20xxxxxxxx}
+    \newcommand\secondExaminer{
+        \secondExaminerName \\
+        NIP \> : \secondExaminerNIP
+    }
+    
+    \newcommand\thirdExaminerName{Dosen Penguji ke-3 (Lengkap)}
+    \newcommand\thirdExaminerNameShort{Dosen Penguji ke-3 (Singkat)}
+    \newcommand\thirdExaminerNIP{20xxxxxxxx}
+    \newcommand\thirdExaminer{
+        \thirdExaminerName \\
+        NIP \> : \thirdExaminerNIP
+    }
+
+    \newcommand\finalExamDay{-}
+    \newcommand\finalExamDate{-}
+    \newcommand\finalExamPlace{Online}
+    
+    \newcommand\postgraduateProgram{Program Magister}
+    \newcommand\postgraduateCourseClass{Komputasi Berbasis Jaringan}
+    \newcommand\postgraduateDepartment{Departemen Teknik Informatika}
+    \newcommand\postgraduateFaculty{Fakultas Teknologi Elektro dan Informatika Cerdas}
+    \newcommand\postgraduateUniversity{Institut Teknologi Sepuluh Nopember}
+    \newcommand\postgraduateCity{Surabaya}
+    \newcommand\postgraduateYear{\the\year{}}
+    
+    % Custom variable
+
+    %Basic configuration
+    \author{
+        \authorName \\
+        NRP \> : \authorNRP
+    }
+    \date{}
+    \title{
+        \titleID
+    }
+
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+
+    \input{src/chapters/001-cover}
+
+    \pagestyle{plain}
+    
+    \input{src/chapters/002-blank-space}
+    
+    \input{src/chapters/003-approval}
+    \input{src/chapters/002-blank-space}
+    
+    \setlength{\parindent}{20pt}
+
+    \input{src/chapters/004-abstract-id}
+    \input{src/chapters/002-blank-space}
+    
+    \input{src/chapters/005-abstract-en}
+    \input{src/chapters/002-blank-space}
+
+    \titleformat*{\section}{\centering\bfseries\Large\MakeUpperCase}
+
+    \input{src/chapters/006-list-content}
+    % \input{src/chapters/002-blank-space}
+
+    \input{src/chapters/007-list-table}
+    \input{src/chapters/002-blank-space}
+    
+    \input{src/chapters/008-list-image}
+    \input{src/chapters/002-blank-space}
+
+    \titleformat*{\section}{\bfseries\Large}
+
+    \pagenumbering{arabic}
+
+    \setcounter{page}{1}
+    \renewcommand{\chaptername}{BAB}
+    \renewcommand{\thechapter}{\arabic{chapter}} % Roman
+    \renewcommand{\bibname}{DAFTAR PUSTAKA}
+
+    % Main Chapters in this Paper
+    \input{src/chapters/009-chapter-01}
+    \input{src/chapters/010-chapter-02}
+    \input{src/chapters/011-chapter-03}
+    \input{src/chapters/012-chapter-04}
+    \input{src/chapters/013-chapter-05}
+    
+    % Bibliography
+    \input{src/chapters/014-bibliography}
+
+    % Indexes
+    \appendix
+
+    % \addcontentsline{toc}{part}{Lampiran}
+    % \part*{Lampiran}
+
+\end{document}
