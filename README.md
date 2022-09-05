@@ -13,18 +13,18 @@
 
 ## Code Name
 
-**ITS-IF-THESIS-TEX 1.0.0**
+**ITS-IF-THESIS-LATEX 1.0.0**
   
 
 ## Short Description
 
 LaTeX is one of the most standard and popular format to write a scientific paper, journal, and research. LaTeX is widely used in academia for the communication and publication of scientific documents in many fields, including mathematics, computer science, engineering, physics, chemistry, economics, linguistics, quantitative psychology, philosophy, and political science.
 
-In *Department of Informatics, Faculty of Intelligent Electrical and Informatics Technology, Sepuluh Nopember Institute of Technology (ITS), Surabaya, Indonesia*, every student will be assigned to write a final paper, also the *Master's Degree* student who should write a **Thesis** alongside with the research.
+In *Department of Informatics, Faculty of Intelligent Electrical and Informatics Technology, Sepuluh Nopember Institute of Technology (ITS), Surabaya, Indonesia*, every student will be assigned to write a final paper, also the *Master's Degree* student who should write a **Thesis** alongside with the research and publish the paper to the journal or conference.
 
-This template is intended to make them easier to write a thesis by using LaTeX and following the ITS Postgraduate thesis official guidance.
+This template is intended to make them easier to write a thesis by using LaTeX and still following the ITS Postgraduate thesis official guidance.
 
-Currently this template is especially developed and written for Informatics postgraduate student, but it could be widely enhanced and re-written for other department or faculty.
+Currently this template is especially developed and written for Department of Informatics master degree student, but it could be widely enhanced and re-written for other department or faculty.
 
 
 ## Author
