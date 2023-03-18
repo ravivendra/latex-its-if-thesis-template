@@ -8,7 +8,7 @@
 % It is developed especially for postgraduate students of :
 %   Department of Informatics
 %   Faculty of Intelligent Electrical and Informatics Technology
-%   Sepuluh Nopember Institute of Technology (ITS)
+%   Institut Teknologi Sepuluh Nopember (ITS)
 %   Surabaya, Indonesia.
 %
 % This LaTex template is intended to make students easier
@@ -17,13 +17,13 @@
 %
 %--------------------------------------------------------------------%
 
-\documentclass[11pt, a4paper, onecolumn, twoside, final, indonesian]{book}
+% One-page document class
+% \documentclass[12pt, a4paper, onecolumn, oneside, final, bahasa]{report}
+
+% Two-page document class
+\documentclass[12pt, a4paper, onecolumn, twoside, final, bahasa]{book}
 
 \input{config/preambule.sty}
-
-\makeatletter
-
-\makeatother
 
 % \SetWatermarkLightness{0.9}
 % \SetWatermarkText{\includegraphics[angle=-45]{src/resources/its-thesis-cover.png}
@@ -32,7 +32,7 @@
 %     \put(0,0){
 %         \parbox[b][\paperheight]{\paperwidth}{
 %             \vfill
-            
+
 %             \centering
 %             \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{src/resources/its-thesis-cover.png}
             
@@ -45,21 +45,26 @@
 % \bibliographystyle{abbrvnat}
 
 % Harvard Bibliography Style
-\bibliographystyle{agsm}
+% \bibliographystyle{agsm}
+\bibliographystyle{src/config/agsm-emph}
 
-\setcitestyle{authoryear, open={(},close={)}}
+% APA Bibliography Style
+% \bibliographystyle{apacite}
+
+\setcitestyle{authoryear, open = {(}, close = {)}}
 
 \backgroundsetup{
-    scale=1,
-    color=black,
-    opacity=1.0,
-    angle=0,
-    contents={%
-        \includegraphics[width=\paperwidth,height=\paperheight]{src/resources/its-thesis-cover-without-logo.png}
+    scale = 1,
+    color = black,
+    opacity = 1.0,
+    angle = 0,
+    contents = {%
+        \includegraphics[width = \paperwidth, height = \paperheight]{src/resources/its-thesis-cover-without-logo.png}
     }%
 }
 
 \begin{document}
+    \include{src/config/hyphenation-id}
 
     % \AddToShipoutPicture*{\BackgroundPic}
     \BgThispage
@@ -111,6 +116,8 @@
         NIP \> : \thirdExaminerNIP
     }
 
+    \newcommand\writingDate{8 Juni 2023} % \daymonthyeardate\today
+
     \newcommand\finalExamDay{-}
     \newcommand\finalExamDate{-}
     \newcommand\finalExamPlace{Online}
@@ -128,67 +135,100 @@
     %Basic configuration
     \author{
         \authorName \\
-        NRP \> : \authorNRP
+        \authorNRP
     }
+
+    % \author{
+    %     \authorName \\
+    %     NRP \> : \authorNRP
+    % }
+
     \date{}
+
     \title{
         \titleID
     }
 
-    \pagenumbering{roman}
-    \setcounter{page}{1}
+    \renewcommand{\contentsname}{\hfill \bfseries \large \MakeUppercase{Daftar Isi} \hfill}   
+    \renewcommand{\cftaftertoctitle}{\hfill}
+    \renewcommand{\listtablename}{\hfill \bfseries \large \MakeUppercase{Daftar Tabel}}
+    \renewcommand{\cftafterlottitle}{\hfill}
+    \renewcommand{\listfigurename}{\hfill \bfseries \large \MakeUppercase{Daftar Gambar}}
+    \renewcommand{\cftafterloftitle}{\hfill}
+    % \renewcommand{\listlistingsname}{\hfill \bfseries \large \MakeUppercase{Daftar Snippet Kode}}
+    % \renewcommand{\cftafterloftitle}{\hfill}
 
-    \input{src/chapters/001-cover}
+    \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+    \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+    \input{src/chapters/001-cover-if}
+    \input{src/chapters/101-blank}
 
     \pagestyle{plain}
+    \pagenumbering{roman}
+    \setcounter{page}{1}
     
-    \input{src/chapters/002-blank-space}
-    
-    \input{src/chapters/003-approval}
-    \input{src/chapters/002-blank-space}
+    \input{src/chapters/002-approval}
+    \input{src/chapters/102-even}
+
+    \input{src/chapters/003-original-statement}
+    \input{src/chapters/102-even}
+
+    \input{src/chapters/004-proudly-present}
+    \input{src/chapters/102-even}
     
     \setlength{\parindent}{20pt}
 
-    \input{src/chapters/004-abstract-id}
-    \input{src/chapters/002-blank-space}
+    \input{src/chapters/005-forewords}
+    % \input{src/chapters/102-even}
+
+    \input{src/chapters/006-abstract-id}
+    \input{src/chapters/102-even}
     
-    \input{src/chapters/005-abstract-en}
-    \input{src/chapters/002-blank-space}
+    \input{src/chapters/007-abstract-en}
+    \input{src/chapters/102-even}
 
-    \titleformat*{\section}{\centering\bfseries\Large\MakeUpperCase}
+    \titleformat*{\section}{\bfseries \large \centering \MakeUpperCase}
 
-    \input{src/chapters/006-list-content}
-    % \input{src/chapters/002-blank-space}
+    \input{src/chapters/008-list-content}
+    % \input{src/chapters/102-even}
 
-    \input{src/chapters/007-list-table}
-    \input{src/chapters/002-blank-space}
-    
-    \input{src/chapters/008-list-image}
-    \input{src/chapters/002-blank-space}
+    \input{src/chapters/009-list-table}
+    \input{src/chapters/102-even}
 
-    \titleformat*{\section}{\bfseries\Large}
+    \input{src/chapters/010-list-image}
+    \input{src/chapters/102-even}
+
+    % \input{src/chapters/011-list-listing}
+    % \input{src/chapters/102-even}
+
+    \titleformat*{\section}{\bfseries \large}
 
     \pagenumbering{arabic}
-
     \setcounter{page}{1}
+
     \renewcommand{\chaptername}{BAB}
     \renewcommand{\thechapter}{\arabic{chapter}} % Roman
     \renewcommand{\bibname}{DAFTAR PUSTAKA}
 
     % Main Chapters in this Paper
-    \input{src/chapters/009-chapter-01}
-    \input{src/chapters/010-chapter-02}
-    \input{src/chapters/011-chapter-03}
-    \input{src/chapters/012-chapter-04}
-    \input{src/chapters/013-chapter-05}
-    
+    \input{src/chapters/012-chapter-01}
+    \input{src/chapters/013-chapter-02}
+    \input{src/chapters/014-chapter-03}
+    \input{src/chapters/015-chapter-04}
+    \input{src/chapters/016-chapter-05}
+
     % Bibliography
-    \input{src/chapters/014-bibliography}
+    \input{src/chapters/017-bibliography}
 
     % Indexes
-    \appendix
+    % \appendix
 
     % \addcontentsline{toc}{part}{Lampiran}
     % \part*{Lampiran}
+
+    % \input{src/chapters/104-appendix-01}
+    % \input{src/chapters/105-appendix-02}
+    % \input{src/chapters/106-appendix-03}
 
 \end{document}

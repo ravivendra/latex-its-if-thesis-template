@@ -1,14 +1,14 @@
 %--------------------------------------------------------------------%
 %
 % Title         : Postgraduate Thesis LaTex template
-% Author        : Ravi Vendra Rishika <ravi.vendra.rishika@gmail.com>
+% Author        : Ravi Vendra Rishika <6025211015@mhs.its.ac.id>
 %
 % Page          : Preambule (Import Library)
 %
 % It is developed especially for postgraduate students of :
 %   Department of Informatics
 %   Faculty of Intelligent Electrical and Informatics Technology
-%   Sepuluh Nopember Institute of Technology (ITS)
+%   Institut Teknologi Sepuluh Nopember (ITS)
 %   Surabaya, Indonesia.
 %
 % This LaTex template is intended to make students easier
@@ -17,46 +17,128 @@
 %
 %--------------------------------------------------------------------%
 
-\special{papersize=210mm,297mm}
+\special{papersize = 210mm, 297mm}
 
-% Setting margin
-% \usepackage[top=3cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
-\usepackage[top=3.5cm,bottom=3cm,inner=4cm,outer=3cm]{geometry}
+% One-page margin setting
+% \usepackage[top = 3.5cm, bottom = 3.0cm, left = 4.0cm, right = 3.0cm]{geometry}
+
+% Two-page margin setting
+\usepackage[top = 3.5cm, bottom = 3.0cm, inner = 4.0cm, outer = 3.0cm]{geometry}
+
+\usepackage{multirow}
+\usepackage[table, xcdraw]{xcolor}
 
 \usepackage{mathptmx}
 
 % Judul bahasa Indonesia
 \usepackage[indonesian]{babel}
 
-%Includes "References" in the table of contents
-\usepackage[nottoc]{tocbibind}
+% Includes "References" in the table of contents
+% \usepackage[nottoc]{tocbibind}
 
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx, titling, blindtext, sectsty, chngcntr}
 \usepackage{etoolbox, titlesec, parskip, watermark, eso-pic}
-\usepackage[hidelinks]{hyperref}
-\usepackage[pages=some]{background}
-\usepackage{setspace}
-\usepackage{xcolor, ragged2e}
+\usepackage{setspace, ragged2e, amsmath, csquotes, datetime}
+\usepackage{booktabs, listings, indentfirst}
 
-\usepackage{amsmath, csquotes}
+\usepackage[hidelinks]{hyperref}
+\usepackage[pages = some]{background}
+
+\usepackage[many]{tcolorbox}
+\usepackage{setspace, multicol, floatrow, caption}
+\usepackage{tocloft}
 
 % Format citation
-% \usepackage[style=authoryear-ibid,backend=biber]{biblatex}
-% \usepackage[backend=biber,style=numeric]{biblatex}
-% \usepackage[backend=bibtex,citestyle=authoryear]{biblatex}
+% \usepackage[style = authoryear-ibid, backend = biber]{biblatex}
+% \usepackage[backend = biber, style = numeric]{biblatex}
+% \usepackage[backend = bibtex, citestyle = authoryear]{biblatex}
+
+% APA Bibliography Style
+% \usepackage{apacite}
+
+% Harvard Bibliography Style
 \usepackage{natbib}
 
 % \usepackage[T1]{fontenc}
 % \usepackage{tgbonum}
+% \usepackage{mathspec}
 
-\renewcommand{\baselinestretch}{1.5}
+\usepackage[
+    singlelinecheck = false % <-- important
+]{caption}
 
-\chapterfont{\centering \Large}
+\floatsetup[figure]{capposition = bottom}
+\floatsetup[table]{capposition = top}
+
+% \DeclareCaptionLabelSeparator{pipe}{ $|$ }
+
+\captionsetup{
+    format = plain,
+    justification = raggedright,
+    singlelinecheck = false,
+    % font = small,
+    % font = {bf, sf}, % This covers labelfont and textfont
+    labelsep = space,
+    figurename = Gambar,
+    tablename = Tabel
+}
+
+% \setstretch{1.5}
+% \setlength\columnsep{0.25in}
+
+\definecolor{main-box}{HTML}{5989cf}
+\definecolor{sub-box}{HTML}{cde4ff} 
+
+% New colors defined below
+\definecolor{codegreen}{rgb}{0, 0.6, 0}
+\definecolor{codegray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{codepurple}{rgb}{0.58, 0, 0.82}
+\definecolor{backcolour}{rgb}{0.95, 0.95, 0.92}
+
+% Code listing style named "danra"
+\lstdefinestyle{danra}{
+    backgroundcolor = \color{backcolour},
+    commentstyle = \color{codegreen},
+    keywordstyle = \color{magenta},
+    numberstyle = \tiny\color{codegray},
+    stringstyle = \color{codepurple},
+    basicstyle = \ttfamily\footnotesize,
+    breakatwhitespace = false,         
+    breaklines = true,                 
+    captionpos = b,                    
+    keepspaces = true,                 
+    numbers = left,                    
+    numbersep = 5pt,                  
+    showspaces = false,                
+    showstringspaces = false,
+    showtabs = false,                  
+    tabsize = 2
+}
+
+% "danra" code listing set
+\lstset{style = danra}
+
+\tcbset{
+    sharp corners,
+    % colback = white,
+    before skip = 0.50cm,
+    after skip = 0.75cm
+}    
+
+\newtcolorbox{info-dialog-box}{
+    sharpish corners,
+    boxrule = 0pt,
+    toprule = 4.5pt,
+    enhanced,
+    fuzzy shadow = {0pt}{-2pt}{-0.5pt}{0.5pt}{black!35}
+}
+
+\chapterfont{\centering \large}
 \titleformat{\chapter}[display]
-  {\Large\centering\bfseries}
-  {\chaptertitlename\ \thechapter}{0pt}
-    {\Large\bfseries\uppercase}
+    {\large \centering \bfseries}
+    {\chaptertitlename\ \thechapter}{0pt}
+        {\large \bfseries \uppercase}
 
 \setcounter{secnumdepth}{3}
 
@@ -64,5 +146,17 @@
 
 \makeatother
 
-\counterwithin{figure}{section}
-\counterwithin{table}{section}
+% Figure, Table, and Listing counter
+\counterwithin{figure}{chapter} % section
+\counterwithin{table}{chapter}
+
+% Customized commands
+\newdateformat{daymonthyeardate}{\THEDAY \monthname[\THEMONTH] \THEYEAR}
+
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand\lstlistingname{Sampel}
+\renewcommand\lstlistlistingname{Daftar Sampel Kode}
+
+% \counterwithin{chapter}{part}
+
+\usepackage{subfiles}
