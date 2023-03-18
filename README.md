@@ -6,7 +6,7 @@
 
 *Faculty of Intelligent Electrical and Informatics Technology*,
 
-*Sepuluh Nopember Institute of Technology (ITS)*,
+*Institut Teknologi Sepuluh Nopember (ITS)*,
 
 *Surabaya, Indonesia.*
 
@@ -20,7 +20,7 @@
 
 LaTeX is one of the most standard and popular format to write a scientific paper, journal, and research. LaTeX is widely used in academia for the communication and publication of scientific documents in many fields, including mathematics, computer science, engineering, physics, chemistry, economics, linguistics, quantitative psychology, philosophy, and political science.
 
-In *Department of Informatics, Faculty of Intelligent Electrical and Informatics Technology, Sepuluh Nopember Institute of Technology (ITS), Surabaya, Indonesia*, every student will be assigned to write a final paper, also the *Master's Degree* student who should write a **Thesis** alongside with the research and publish the paper to the journal or conference.
+In *Department of Informatics, Faculty of Intelligent Electrical and Informatics Technology, Institut Teknologi Sepuluh Nopember (ITS), Surabaya, Indonesia*, every student will be assigned to write a final paper, also the *Master's Degree* student who should write a **Thesis** alongside with the research and publish the paper to the journal or conference.
 
 This template is intended to make them easier to write a thesis by using LaTeX and still following the ITS Postgraduate thesis official guidance.
 
