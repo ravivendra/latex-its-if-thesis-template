@@ -1,0 +1,86 @@
+%--------------------------------------------------------------------%
+%
+% Title         : Postgraduate Thesis LaTex template
+% Author        : Ravi Vendra Rishika <ravi.vendra.rishika@gmail.com>
+%
+% Page          : Cover
+%
+% It is developed especially for postgraduate students of :
+%   Department of Informatics
+%   Faculty of Intelligent Electrical and Informatics Technology
+%   Institut Teknologi Sepuluh Nopember (ITS)
+%   Surabaya, Indonesia.
+%
+% This LaTex template is intended to make students easier
+% to write master's degree thesis in LaTex using specific
+% Department of Informatics of ITS' format.
+%
+%--------------------------------------------------------------------%
+
+\clearpage
+
+\newgeometry{top = 1.5cm, bottom = 3.0cm, left = 3.0cm, right = 3.0cm}
+
+\pagestyle{empty}
+
+\begin{flushleft}
+
+    % \color{white}
+
+    \begin{figure}[h]
+        \flushleft \raggedright
+        \includegraphics[width = 3.5cm, height = 3.5cm]{src/resources/its-logo.png}
+    \end{figure}
+
+    \vspace{3.0cm}
+
+    {\fontfamily{lmss} \selectfont \large \bfseries \MakeUppercase
+        {\essay}
+    }
+
+    \vspace{0.9cm}
+
+    {\fontfamily{lmss} \selectfont \Large \bfseries \MakeUppercase
+        {\thetitle}
+    }
+
+    \vspace{0.9cm}
+
+    \begin{singlespace}
+   	    {\fontfamily{lmss} \selectfont \large \bfseries \MakeUppercase
+   	        {\theauthor}
+        }
+    \end{singlespace}
+
+    \vspace{0.9cm}
+
+    \begin{singlespace}
+   	    {\fontfamily{lmss} \selectfont \normalsize \bfseries
+   	        Dosen Pembimbing: \\
+                {\firstSupervisorName} \\
+                {\secondSupervisorName}
+        }
+    \end{singlespace}
+
+    \vspace{0.9cm}
+
+    \begin{singlespace}
+   	    {\fontfamily{lmss} \selectfont
+            \normalsize \bfseries \MakeUppercase {
+                {\postgraduateProgram} \\
+                Bidang Keahlian {\postgraduateCourseClass} ({\postgraduateCourseClassShort}) \\
+                Program Studi {\postgraduateDegree} {\postgraduateConcentration} \\
+                {\postgraduateDepartment} \\
+                {\postgraduateFaculty} \\
+                {\postgraduateUniversity} \\
+                {\postgraduateCity} \\
+                {\postgraduateYear}
+            }
+        }
+    \end{singlespace}
+
+\end{flushleft}
+
+\restoregeometry
+
+\clearpage

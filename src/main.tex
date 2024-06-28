@@ -53,25 +53,18 @@
 
 \setcitestyle{authoryear, open = {(}, close = {)}}
 
-\backgroundsetup{
-    scale = 1,
-    color = black,
-    opacity = 1.0,
-    angle = 0,
-    contents = {%
-        \includegraphics[width = \paperwidth, height = \paperheight]{src/resources/its-thesis-cover-without-logo.png}
-    }%
-}
-
 \begin{document}
     \include{src/config/hyphenation-id}
 
     % \AddToShipoutPicture*{\BackgroundPic}
-    \BgThispage
     
     % New variables defined here
     \newcommand\titleID{TESIS MAHASISWA DEPARTEMEN TEKNIK INFORMATIKA INSTITUT TEKNOLOGI SEPULUH NOPEMBER (DALAM BAHASA INDONESIA)}
+    
     \newcommand\titleEN{POSTGRADUATE STUDENT THESIS OF INFORMATICS DEPARTMENT OF SEPULUH NOPEMBER INSTITUTE OF TECHNOLOGY (IN ENGLISH)}
+
+    \newcommand\essay{IF185301 TESIS}
+    % \newcommand\essay{IF185301 TESIS - PROPOSAL}
 
     \newcommand\authorName{Nama Mahasiswa}
     \newcommand\authorNRP{60xxxxxxxx}
@@ -116,23 +109,41 @@
         NIP \> : \thirdExaminerNIP
     }
 
-    \newcommand\writingDate{8 Juni 2023} % \daymonthyeardate\today
+    \newcommand\academicPostGraduateDirectorName{Direktur Pascasarjana}
+    \newcommand\academicPostGraduateDirectorNameShort{Direktur Pascasarjana}
+    \newcommand\academicPostGraduateDirectorNIP{20xxxxxxxx}
 
-    \newcommand\finalExamDay{-}
-    \newcommand\finalExamDate{-}
-    \newcommand\finalExamPlace{Online}
+    \newcommand\chiefInformaticsDepartmentName{Kepala Departemen Informatika}
+    \newcommand\chiefInformaticsDepartmentNameShort{Kepala Departemen Informatika}
+    \newcommand\chiefInformaticsDepartmentNIP{20xxxxxxxx}
+
+    \newcommand\writingDate{27 Juni 2024} % \daymonthyeardate\today
+
+    \newcommand\finalExamDay{Rabu}
+    \newcommand\finalExamDate{10 Juli 2024}
+    \newcommand\finalExamPlace{Ruang 217B}
     
+    \newcommand\finalGraduationPeriod{September 2024}
+
     \newcommand\postgraduateProgram{Program Magister}
-    \newcommand\postgraduateCourseClass{Komputasi Berbasis Jaringan}
+    \newcommand\postgraduateTitle{Magister Komputer (M.Kom.)}
+    \newcommand\postgraduateTitleShort{M.Kom.}
+    \newcommand\postgraduateConcentration{Teknik Informatika}
+    % \newcommand\postgraduateCourseClass{Komputasi Berbasis Jaringan}
+    % \newcommand\postgraduateCourseClassShort{KBJ}
+    \newcommand\postgraduateCourseClass{Teknologi Jaringan dan Keamanan Siber Cerdas}
+    \newcommand\postgraduateCourseClassShort{NETICS}
+    \newcommand\postgraduateDegree{S2}
     \newcommand\postgraduateDepartment{Departemen Teknik Informatika}
     \newcommand\postgraduateFaculty{Fakultas Teknologi Elektro dan Informatika Cerdas}
     \newcommand\postgraduateUniversity{Institut Teknologi Sepuluh Nopember}
+    
     \newcommand\postgraduateCity{Surabaya}
     \newcommand\postgraduateYear{\the\year{}}
     
     % Custom variable
 
-    %Basic configuration
+    % Basic configuration
     \author{
         \authorName \\
         \authorNRP
@@ -140,7 +151,7 @@
 
     % \author{
     %     \authorName \\
-    %     NRP \> : \authorNRP
+    %     NRP: \authorNRP
     % }
 
     \date{}
@@ -155,51 +166,95 @@
     \renewcommand{\cftafterlottitle}{\hfill}
     \renewcommand{\listfigurename}{\hfill \bfseries \large \MakeUppercase{Daftar Gambar}}
     \renewcommand{\cftafterloftitle}{\hfill}
-    % \renewcommand{\listlistingsname}{\hfill \bfseries \large \MakeUppercase{Daftar Snippet Kode}}
+    \renewcommand{\listlistingsname}{\hfill \bfseries \large \MakeUppercase{Daftar Snippet Kode}}
     % \renewcommand{\cftafterloftitle}{\hfill}
 
     \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
     \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 
+    % \AddToShipoutPicture*{\BackgroundPic}
+    \backgroundsetup{
+        scale = 1,
+        color = black,
+        opacity = 1.0,
+        angle = 0,
+        contents = {%
+            \includegraphics[width = \paperwidth, height = \paperheight]{src/resources/its-thesis-cover-without-logo.png}
+        }%
+    }
+
+    \backgroundsetup{
+        scale = 1,
+        color = black,
+        opacity = 1.0,
+        angle = 0,
+        contents = {%
+            \includegraphics[width = \paperwidth, height = \paperheight]{src/resources/its-thesis-cover-without-logo.png}
+        }%
+    }
+    
+    \BgThispage
+
     \input{src/chapters/001-cover-if}
+    \input{src/chapters/101-blank}
+    
+    \input{src/chapters/002-cover-if-no-background}
     \input{src/chapters/101-blank}
 
     \pagestyle{plain}
     \pagenumbering{roman}
     \setcounter{page}{1}
-    
-    \input{src/chapters/002-approval}
+
+    \input{src/chapters/003-approval-proposal}
     \input{src/chapters/102-even}
 
-    \input{src/chapters/003-original-statement}
+    \backgroundsetup{
+        scale = 1,
+        color = black,
+        opacity = 1.0,
+        angle = 0,
+        contents = {%
+            \includegraphics[width = \paperwidth, height = \paperheight]{src/resources/its-thesis-validation.png}
+        }%
+    }
+
+    \BgThispage
+
+    \input{src/chapters/004-approval-thesis}
     \input{src/chapters/102-even}
 
-    \input{src/chapters/004-proudly-present}
+    \input{src/chapters/005-original-statement}
     \input{src/chapters/102-even}
-    
-    \setlength{\parindent}{20pt}
 
-    \input{src/chapters/005-forewords}
-    % \input{src/chapters/102-even}
-
-    \input{src/chapters/006-abstract-id}
+    \input{src/chapters/006-proudly-present}
     \input{src/chapters/102-even}
-    
-    \input{src/chapters/007-abstract-en}
+
+    \setlength{\parindent}{1.5em}
+    \setlength{\parskip}{0em}
+
+    \linespread{1.5}
+
+    \input{src/chapters/007-forewords}
+    \input{src/chapters/102-even}
+
+    \input{src/chapters/008-abstract-id}
+    \input{src/chapters/102-even}
+
+    \input{src/chapters/009-abstract-en}
     \input{src/chapters/102-even}
 
     \titleformat*{\section}{\bfseries \large \centering \MakeUpperCase}
 
-    \input{src/chapters/008-list-content}
-    % \input{src/chapters/102-even}
-
-    \input{src/chapters/009-list-table}
+    \input{src/chapters/010-list-content}
     \input{src/chapters/102-even}
 
-    \input{src/chapters/010-list-image}
+    \input{src/chapters/011-list-table}
     \input{src/chapters/102-even}
 
-    % \input{src/chapters/011-list-listing}
+    \input{src/chapters/012-list-image}
+    \input{src/chapters/102-even}
+
+    % \input{src/chapters/013-list-listing}
     % \input{src/chapters/102-even}
 
     \titleformat*{\section}{\bfseries \large}
@@ -212,23 +267,36 @@
     \renewcommand{\bibname}{DAFTAR PUSTAKA}
 
     % Main Chapters in this Paper
-    \input{src/chapters/012-chapter-01}
-    \input{src/chapters/013-chapter-02}
-    \input{src/chapters/014-chapter-03}
-    \input{src/chapters/015-chapter-04}
-    \input{src/chapters/016-chapter-05}
+    \input{src/chapters/014-chapter-01}
+    \input{src/chapters/015-chapter-02}
+    \input{src/chapters/016-chapter-03}
+    \input{src/chapters/017-chapter-04}
+    \input{src/chapters/018-chapter-05}
 
     % Bibliography
-    \input{src/chapters/017-bibliography}
+    \input{src/chapters/019-bibliography}
 
-    % Indexes
-    % \appendix
+    \renewcommand{\chaptername}{}
+    \renewcommand{\thechapter}{}
 
     % \addcontentsline{toc}{part}{Lampiran}
     % \part*{Lampiran}
+    
+    % \addcontentsline{toc}{chapter}{Lampiran}
+    % \chapter*{Lampiran}
+    
+    % Biography
+    \input{src/chapters/020-appendix}
 
-    % \input{src/chapters/104-appendix-01}
-    % \input{src/chapters/105-appendix-02}
-    % \input{src/chapters/106-appendix-03}
+    % Indexes
+    \appendix
+
+    \input{src/chapters/104-appendix-01}
+    \input{src/chapters/105-appendix-02}
+    \input{src/chapters/106-appendix-03}
+    
+    % Biography
+    \input{src/chapters/021-biography}
+    \input{src/chapters/102-even}
 
 \end{document}
